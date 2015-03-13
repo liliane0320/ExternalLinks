@@ -1,25 +1,275 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ExternalLinks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3d-tX-CNz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNV-Rk-65o">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="rewind" id="Hfh-4z-dUt">
+                                        <connections>
+                                            <action selector="goBack" destination="R3d-tX-CNz" id="r1e-ro-f1l"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WAz-fM-dUj"/>
+                                    <barButtonItem systemItem="fastForward" id="EUW-2K-PdP">
+                                        <connections>
+                                            <action selector="goForward" destination="R3d-tX-CNz" id="lXg-Nv-O8H"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="j9c-Et-V06"/>
+                                    <barButtonItem title="Moodle" id="55Y-Xv-oFd">
+                                        <connections>
+                                            <segue destination="UkE-a3-kgB" kind="show" id="sWR-SU-Li8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VXX-MK-T2z"/>
+                                    <barButtonItem title="D2L" id="iLU-Fm-Gl9">
+                                        <connections>
+                                            <segue destination="kAE-fj-3EB" kind="show" id="Rs4-qq-MFY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QT4-Le-4XE"/>
+                                    <barButtonItem title="SOLUS" id="Nej-wE-ucW">
+                                        <connections>
+                                            <segue destination="8jX-1z-Ai4" kind="show" id="uYm-G5-ffQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wpc-YZ-brR"/>
+                                    <barButtonItem systemItem="refresh" id="zed-wU-XZZ">
+                                        <connections>
+                                            <action selector="reload" destination="R3d-tX-CNz" id="HGY-Cm-iRh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="QueensU" destination="R3d-tX-CNz" id="ai7-jC-nd4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="571" y="903"/>
+        </scene>
+        <!--Moodle-->
+        <scene sceneID="aes-2S-epf">
+            <objects>
+                <viewController title="Moodle" id="UkE-a3-kgB" customClass="Moodle" customModule="ExternalLinks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ka-ut-el6"/>
+                        <viewControllerLayoutGuide type="bottom" id="l3p-GH-5aB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aad-KE-ote">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98D-wn-lFx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pck-ot-Lma">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="w5t-Ur-f0x">
+                                        <connections>
+                                            <action selector="goBack" destination="98D-wn-lFx" id="vLC-M8-kZ0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="eO0-Yr-7pj">
+                                        <connections>
+                                            <action selector="goForward" destination="98D-wn-lFx" id="yUR-oT-rfw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="QueensU" id="Pfz-zB-vUH">
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="show" id="tLh-Ai-Nuo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="D2L" id="xTK-um-XCk">
+                                        <connections>
+                                            <segue destination="kAE-fj-3EB" kind="show" id="1xL-O5-w2s"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="SOLUS" id="yIl-PL-Sp8">
+                                        <connections>
+                                            <segue destination="8jX-1z-Ai4" kind="show" id="62d-jk-4kw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="refresh" id="M7c-cq-yfT">
+                                        <connections>
+                                            <action selector="reload" destination="98D-wn-lFx" id="T46-X7-qDa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="Moodle" destination="98D-wn-lFx" id="IcY-Yi-9EE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyj-yw-s8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="1585"/>
+        </scene>
+        <!--Engineering Desire2Learn-->
+        <scene sceneID="f63-kc-WGE">
+            <objects>
+                <viewController title="Engineering Desire2Learn" id="kAE-fj-3EB" customClass="D2L" customModule="ExternalLinks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cEp-tQ-PTf"/>
+                        <viewControllerLayoutGuide type="bottom" id="c2e-8E-2e9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mo1-0x-S9G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cig-09-4XT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6I-st-EY4">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="iV6-4U-I3u">
+                                        <connections>
+                                            <action selector="goBack" destination="cig-09-4XT" id="pmA-vT-dyH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="eP9-mW-6N1">
+                                        <connections>
+                                            <action selector="goForward" destination="cig-09-4XT" id="wLv-T8-0v1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="QueensU" id="boS-TZ-8Of">
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="show" id="Xvz-IV-GYT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Moodle" id="Es5-AO-asi">
+                                        <connections>
+                                            <segue destination="UkE-a3-kgB" kind="show" id="6Q5-Ac-5O2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="SOLUS" id="n0Q-JG-lJQ">
+                                        <connections>
+                                            <segue destination="8jX-1z-Ai4" kind="show" id="v3G-GJ-8fq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" systemItem="refresh" id="lBO-17-vMI">
+                                        <connections>
+                                            <action selector="reload" destination="cig-09-4XT" id="zy3-xd-wah"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="D2L" destination="cig-09-4XT" id="5b9-ez-aYR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCT-Be-OOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="1755"/>
+        </scene>
+        <!--SOLUS-->
+        <scene sceneID="4qW-qa-u44">
+            <objects>
+                <viewController title="SOLUS" id="8jX-1z-Ai4" customClass="SOLUS" customModule="ExternalLinks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EsB-6l-8ge"/>
+                        <viewControllerLayoutGuide type="bottom" id="z9K-3G-YLD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SeZ-8V-8Gw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRa-s8-3Co">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ctm-Hu-urD">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="tTR-qn-lLw">
+                                        <connections>
+                                            <action selector="goBack" destination="tRa-s8-3Co" id="Wr9-Rd-uHQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="ipg-gQ-yHD">
+                                        <connections>
+                                            <action selector="goForward" destination="tRa-s8-3Co" id="Wce-rH-FaQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="QueensU" id="ruJ-0z-rVV">
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="show" id="71G-Hq-jK2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Moodle" id="CAi-Pe-ZPa">
+                                        <connections>
+                                            <segue destination="UkE-a3-kgB" kind="show" id="alU-Z3-V6E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="D2L" id="k4Y-aP-fT0">
+                                        <connections>
+                                            <segue destination="kAE-fj-3EB" kind="show" id="Fq6-TH-hI0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="refresh" id="JCa-5k-q8s">
+                                        <connections>
+                                            <action selector="reload" destination="tRa-s8-3Co" id="BqJ-LT-yp0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="SOLUS" destination="tRa-s8-3Co" id="Wfs-2X-Vrl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJ7-9v-DWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024" y="1537"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rs4-qq-MFY"/>
+        <segue reference="Xvz-IV-GYT"/>
+        <segue reference="uYm-G5-ffQ"/>
+        <segue reference="sWR-SU-Li8"/>
+    </inferredMetricsTieBreakers>
 </document>

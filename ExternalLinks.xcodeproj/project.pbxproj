@@ -13,6 +13,9 @@
 		FFB2DC461AB12BF5002EA085 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB2DC451AB12BF5002EA085 /* Images.xcassets */; };
 		FFB2DC491AB12BF5002EA085 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFB2DC471AB12BF5002EA085 /* LaunchScreen.xib */; };
 		FFB2DC551AB12BF5002EA085 /* ExternalLinksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2DC541AB12BF5002EA085 /* ExternalLinksTests.swift */; };
+		FFB2DC5F1AB1507F002EA085 /* Moodle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2DC5E1AB1507F002EA085 /* Moodle.swift */; };
+		FFB2DC611AB15440002EA085 /* D2L.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2DC601AB15440002EA085 /* D2L.swift */; };
+		FFB2DC631AB154F5002EA085 /* SOLUS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2DC621AB154F5002EA085 /* SOLUS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		FFB2DC4E1AB12BF5002EA085 /* ExternalLinksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExternalLinksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB2DC531AB12BF5002EA085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB2DC541AB12BF5002EA085 /* ExternalLinksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinksTests.swift; sourceTree = "<group>"; };
+		FFB2DC5E1AB1507F002EA085 /* Moodle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moodle.swift; sourceTree = "<group>"; };
+		FFB2DC601AB15440002EA085 /* D2L.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D2L.swift; sourceTree = "<group>"; };
+		FFB2DC621AB154F5002EA085 /* SOLUS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLUS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,9 @@
 				FFB2DC3E1AB12BF5002EA085 /* AppDelegate.swift */,
 				FFB2DC401AB12BF5002EA085 /* ViewController.swift */,
 				FFB2DC421AB12BF5002EA085 /* Main.storyboard */,
+				FFB2DC621AB154F5002EA085 /* SOLUS.swift */,
+				FFB2DC601AB15440002EA085 /* D2L.swift */,
+				FFB2DC5E1AB1507F002EA085 /* Moodle.swift */,
 				FFB2DC451AB12BF5002EA085 /* Images.xcassets */,
 				FFB2DC471AB12BF5002EA085 /* LaunchScreen.xib */,
 				FFB2DC3C1AB12BF5002EA085 /* Supporting Files */,
@@ -214,6 +223,9 @@
 			files = (
 				FFB2DC411AB12BF5002EA085 /* ViewController.swift in Sources */,
 				FFB2DC3F1AB12BF5002EA085 /* AppDelegate.swift in Sources */,
+				FFB2DC611AB15440002EA085 /* D2L.swift in Sources */,
+				FFB2DC5F1AB1507F002EA085 /* Moodle.swift in Sources */,
+				FFB2DC631AB154F5002EA085 /* SOLUS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
